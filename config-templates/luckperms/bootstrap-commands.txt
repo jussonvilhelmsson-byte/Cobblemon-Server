@@ -1,0 +1,35 @@
+# Run these in console after LuckPerms is installed.
+# This creates a basic Cobblemon survival hierarchy.
+
+lp creategroup default
+lp creategroup helper
+lp creategroup mod
+lp creategroup admin
+lp creategroup owner
+
+lp group helper parent add default
+lp group mod parent add helper
+lp group admin parent add mod
+lp group owner parent add admin
+
+# Default survival QoL
+lp group default permission set minecraft.command.trigger true
+lp group default permission set minecraft.command.help true
+
+# Helper moderation basics
+lp group helper permission set minecraft.command.tell true
+lp group helper permission set minecraft.command.msg true
+
+# Mod controls (adjust per moderation stack)
+lp group mod permission set minecraft.command.kick true
+lp group mod permission set minecraft.command.ban true
+lp group mod permission set minecraft.command.ban-ip true
+lp group mod permission set minecraft.command.pardon true
+
+# Admin controls
+lp group admin permission set minecraft.command.gamemode true
+lp group admin permission set minecraft.command.teleport true
+lp group admin permission set minecraft.command.effect true
+
+# Owner wildcard
+lp group owner permission set * true

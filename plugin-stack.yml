@@ -1,0 +1,56 @@
+server:
+  minecraft: 1.21.1
+  cobblemon: latest-compatible
+  loader: fabric
+
+categories:
+  protection_claims:
+    primary:
+      - name: FTB Chunks
+      - name: FTB Teams
+    notes:
+      - Configure default claim limit and trust settings.
+
+  permissions_staff:
+    primary:
+      - name: LuckPerms (Fabric)
+    groups:
+      - default
+      - helper
+      - mod
+      - admin
+      - owner
+
+  economy_shops:
+    choose_one:
+      - name: Lightman's Currency
+      - name: Numismatic Overhaul
+    notes:
+      - Theme display currency as Pokédollars.
+      - Add anti-inflation money sinks.
+
+  trade_social_qol:
+    primary:
+      - name: CobblemonExtras
+    notes:
+      - Enable trade/social commands with cooldowns and logging.
+
+  ingame_info:
+    primary:
+      - name: Cobblemon Wiki GUI
+
+  events_progression:
+    build_out:
+      - gyms-badges
+      - rotating-outbreaks
+      - raid-boss-events
+      - daily-weekly-quests
+      - seasonal-rewards
+
+  core_admin_utility:
+    required:
+      - backups
+      - rollback-logging
+      - moderation-tools
+      - teleport-home-utilities
+      - performance-profiling
